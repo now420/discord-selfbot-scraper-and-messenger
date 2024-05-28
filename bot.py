@@ -1,12 +1,12 @@
 import discord
 
 message = "your message here"
-
+serverid = 123456678
 class MyClient(discord.Client):
     async def on_ready(self):
         print('Logged on as', self.user)
 
-        guild = self.get_guild(1245024850448224277)
+        guild = self.get_guild(serverid)
         if guild:
             with open('server_members.txt', 'w') as f:
                 for member in guild.members:
